@@ -1,0 +1,46 @@
+<%include partials/headercamp.ejs%>
+
+<div class="row mr-0">
+    
+    <div class="col-lg-7 pr-0" id="imgcol">
+    <p id="ft">“Great Things Never Come from Comfort Zones”</p>
+    </div>
+    <div class="col-lg-5 pl-0" id="formcol">
+        <div class="container" id="formcont">
+            <p id="add">Add your new Campground</p>
+            <form id="radio" action="/campgrounds">
+                <span style="margin-left: 50px; margin-right: 20px;">Renting:</span>
+                <input type="radio" value="Short" name="rent" id="t1">
+                <label for="t1" style="margin-right: 10px;">Short Term</label>
+                
+                <input type="radio" value="Long" name="rent" id="t2">
+                <label for="t2">Long Term</label>
+
+            </form>
+            <form action="/campgrounds" method="POST">
+            <!-- for getting inputs in same line -->
+            <div class="names">
+                <input  type="text" name="name" placeholder="Camp Name*" style="margin-bottom: 10px; margin-left: 30px;" id="new" class="f">
+                <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Contact Number*" id="new" maxlength="10" style="margin-left: 40px;" class="f">
+            </div>
+            <br>
+            <!-- till here -->
+            <input  type="email" name="name2" placeholder="Email*" style="margin-bottom: 10px; margin-left: 30px;" id="new" class="f">
+            <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Area Pin Code*" id="new" maxlength="6" id="new" style="margin-left: 40px;"class="f">            
+            <br>
+            <input type="text" placeholder="Image URL*" name="image"  style="margin-bottom: 10px; margin-left: 30px;" id="new3" class="f">
+            <br>
+            <textarea rows="2" cols="49" placeholder="Add description for your Campground" name="description"  style="margin-bottom: 10px; border-radius:5px; margin-left: 30px; margin-top: 10px;" id="text"></textarea>
+            <input class=" btn btn-primary btn-sm" type="Submit" style="margin-left: 200px;">
+            <a href="/campgrounds" class="btn btn-sm btn-danger" style="color: white;">Back</a>
+
+    </form>
+
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
+

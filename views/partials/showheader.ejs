@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Tera|Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam:300,400,400i,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2f0284777.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" type="text/css" href="/stylesheets/show.css">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- NAVBAR STARTS -->
+<nav class="navbar navbar-expand-md" id="mainnavbar">
+    <div class="container">
+    <a href="/campgrounds" class="navbar-brand"><img src="/Images/Picture3.png" width="20px;"> YelpCamp</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#data">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="data">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Yelp!</a>
+                </li>
+            
+            </ul>
+            <ul class="navbar-nav">
+                <% if(!currentUser){ %>
+        
+                    <li class="nav-item">
+                            <a href="/register" class="nav-link">Sign Up</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/login" class="nav-link ">Login</a>
+                        </li>
+                <%}else{%>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Signed in as <%=currentUser.username %> </a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="/logout" class="nav-link">Logout</a>
+                        </li>
+                <%}%>
+                
+                
+            
+        </ul>
+        </div>
+    </div>
+    </nav>
+<!-- NAVBAR ENDS -->
+            <% if(error && error.length>0){ %>
+                <div class="alert alert-danger container" role="alert" id="alerte">
+                    <%= error %>
+                </div>
+            <% } %>
+            
+                <% if(success && success.length>0){ %>
+                    <div class="alert alert-success container" role="alert" id="alerts">
+                            <%= success %>
+                    </div>    
+                <% } %>

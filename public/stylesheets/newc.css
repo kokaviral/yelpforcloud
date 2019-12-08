@@ -1,0 +1,79 @@
+body
+{
+    background-image: url('/Images/newc4.jpg'); 
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+p
+{
+    color: white;
+}
+
+#mainc
+{
+    margin-top: 100px;
+}
+
+p
+{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 90px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+p {
+    text-shadow: 0 0 2px #fff,
+    0 0 2px #fff,
+    0 0 4px #232323,
+    0 0 4px #232323,
+    0 0 6px #232323,
+    0 0 6px #232323,
+    0 0 8px #232323,
+    0 0 8px #232323;
+}
+
+textarea
+{
+    color: black;
+}
+#text
+{
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#text::placeholder
+{
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 500ms all;
+}
+
+#text:focus
+{
+    background-color: white;
+    color: black;
+    transition: 500ms all;
+    font-family: 'Didact Gothic', sans-serif;
+    height: 500px;
+}
+
+#button
+{
+    margin-left: 500px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#alerte,#alerts
+{
+    margin-top: 10px;
+}

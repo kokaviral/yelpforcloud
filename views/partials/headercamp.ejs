@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/b2f0284777.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/newcamp.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <nav class="navbar navbar-expand-md" id="mainnavbar">
+            <div class="container">
+            <a href="#" class="navbar-brand"><img src="/Images/Picture3.png" width="20px;"> YelpCamp</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#data">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="data">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">Yelp!</a>
+                        </li>
+                    
+                    </ul>
+                    <ul class="navbar-nav">
+                        <% if(!currentUser){ %>
+                
+                            <li class="nav-item">
+                                    <a href="/register" class="nav-link">Sign Up</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="/login" class="nav-link ">Login</a>
+                                </li>
+                        <%}else{%>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Signed in as <%=currentUser.username %> </a>
+                            </li>
+                            <li class="nav-item">
+                                    <a href="/logout" class="nav-link">Logout</a>
+                                </li>
+                        <%}%>                    
+                </ul>
+                </div>
+            </div>
+            </nav>

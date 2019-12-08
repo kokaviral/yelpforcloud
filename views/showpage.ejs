@@ -1,0 +1,106 @@
+<%include partials/showheader.ejs%>
+
+<div class="row mr-0 mb-0" id="mainrow">
+<div class="col-lg-3" id="nav">
+    <p class="title"><%=campbyid.name%></p>
+    <p class="auth">a campground by <%=campbyid.author.username%></p>
+     <div class="container" id="btncontainer" style="margin-top: 40px;">
+      <%if(currentUser && campbyid.author.id.equals(currentUser._id)){%>
+        <p>
+        <form action="/campgrounds/<%=campbyid._id%>?_method=DELETE" method="POST" style="float:left;">
+        <button class="btn btn-danger btn-sm" style="float: right; margin-right: 10px; margin-left: 80px;">Delete</button>
+        </form>
+        <a href="/campgrounds/<%=campbyid._id%>/edit" class="btn btn-warning btn-sm" style="float: left;">Edit</a>
+
+      </p>
+        <%}%>
+      
+    </div>
+    <div class="links" style="padding-top: 20px;">
+    <a href="/campgrounds" id="backbtn"><p style="text-align: center;" id="tags">Go Back</p></a>
+    <a href="https://www.yelp.com" id="backbtn"><p style="text-align: center;" id="tags">Refer yelp.com</p></a>
+    <a href="#" id="backbtn"><p style="text-align: center;" id="tags" title="Coming Soon">Live Price</p></a>
+    <a href="#" id="backbtn"><p style="text-align: center;" id="tags" title="Coming Soon">Book Now</p></a>
+</div>
+
+</div>
+<div class="col-lg-9" id="othercol">
+<div class="container">
+    <div class="container" id="cont2">
+        <img src="<%=campbyid.image %>" id="mainimg">
+    </div>
+    <div class="ui raised segment" id="desc">
+        <h4 class="ui header" id="header">Description</h4>
+        <p id="content"><%=campbyid.description %></p>
+    </div>
+    <h1 class="display-2" id="commhead">Comments</h1>
+    <div class="sexy_line"></div>
+    <a href="/campgrounds/<%= campbyid._id %>/comments/new" class="btn btn-primary" style="width: 30%;" id="commbtn">Add a new one!</a>
+
+<!--Comments-->
+    <div class="comments ui raised segment" id="feedcontainer">
+        <div class="ui feed" id="feed">
+                    <% campbyid.comment.forEach(function(comment){ %>
+                    <div class="event"  id="eachcomm">
+                      <div class="label">
+                        <img src="https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png">
+                      </div>
+                      <div class="content">
+                        <div class="summary">
+                          <a><b><p id="username"><%= comment.author.username %></p></b></a> <span id="js">posted his comment</span>
+                          <div class="date" id="date">
+                            3 days ago
+                          </div>
+                        </div>
+                        <div class="extra text" id="maint">
+                            <p><%= comment.text %></p>
+                        </div>
+                        <div class="meta">
+                          <a class="like">
+                            <i class="like icon" id="icon"></i> <span id="like">5 Likes</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+    <div class="sexy_line2"></div>
+                    
+                    <% }); %>
+                  </div>
+            </div>
+</div>
+<!--Comm Ending-->    
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

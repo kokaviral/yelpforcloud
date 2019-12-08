@@ -1,0 +1,78 @@
+<%include partials/header.ejs%>
+
+<div class="container-fluid" id="mainc">
+<div class="text">
+    Explore New Boundaries!
+</div>
+</div>
+<div class="container-fluid" id="mainc2">
+    <p id="indextext">Campgrounds</p>
+    <hr id="indexhr">
+<div class="container">
+        <div class="row">
+                <% campgs.forEach(function(camp){ %>
+                    <div class="col-lg-3 col-sm-6" style="margin-right: 0px; margin-bottom: 80px;">
+                        <div class="card" style="width: 15rem;">
+                            <img src=' <%= camp["image"] %> ' class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-title"> <%= camp["name"] %> </p>
+                            <i><p id="username"> by <%= camp.author.username%></p></i>
+                                <p class="lead">
+                                    <a href="/campgrounds/<%= camp._id%>" class="btn btn-outline-warning btn-sm" id="infobutton" style="margin-right: 4px;">About</a>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="far fa-heart"></i></button>
+                                    <img src="/Images/Picture3.png" style="max-width: 25px; margin-left: 70px; ">
+                                
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+</div>
+
+</div>
+
+        
+<div class="container-fluid" id="mainc3">
+    <div class="text3">
+        Create New Experiences 
+    </div>
+    <a href="/newcamp" class="btn btn-md btn-outline-info" id="newcbutton">Add a new Campground <i class="fas fa-edit"></i></a>
+    <div class="footer" style="margin-top: 400px; margin-bottom:30px;">
+        <div class="row mr-0">
+            <div class="col-lg-3" style="margin-left: 100px; border-right: 1px solid red;">
+                <p class="foothead">Headquarters</p>
+                <p class="foottext">H-652<br>
+                Men's Hostel Block H<br>
+                VIT Vellore<br>
+                Vellore, Tamil Nadu 
+                632014</p>
+            </div>
+            <div class="col-lg-3">
+                <p class="lead">
+                    <span style="color: white;">Follow us on:<br>
+                    <span style="color: #E1306C">Instagram  <i class="fab fa-instagram"></i><br></span>
+                    <span style="color: #3C5A99">Facebook  <i class="fab fa-facebook-square"></i><br></span>
+                    <span style="color: #fffc00">Snapchat  <i class="fab fa-snapchat-ghost"></i></span>
+                </p>
+            </div>
+           <div class="col-lg-5" >
+               <img src="/Images/Picture4.png" style="width:400px; align-content: center;">
+           </div>
+        </div>
+        <div class="row mr-0" style="margin-top: 50px; text-align:center">
+            <p class="lead" style="color: rgba(255,255,255,0.5);" id="copyrights">
+                2019 © YelpCamp   |   All rights reserved   |   Webdesigning by Aviral
+            </p>
+        </div>
+        </div>
+        
+</div>
+
+
+
+
+
+</body>
+</html>
+

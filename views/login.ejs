@@ -1,0 +1,44 @@
+<%include partials/headerlogin.ejs%>
+
+<!-- <div class="container" id="mainc">
+    <h1 id="content" style="margin-bottom: 40px;">Login</h1>
+
+     
+</div> -->
+
+<div id="mainc" class="container">
+<p id="yclogin">Yelp<span style="color: rgb(255, 72, 72);">Camp</span></Camp></p>
+<!-- NOTE THE COLOR:RGB(255,72,72) -->
+<form action="/login" method="POST">
+    <div class="group">
+        <input type="text" name="username" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Username</label>
+    </div>
+
+    <div class="group">
+        <input type="password" name="password" required>            
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Password</label>
+    </div>
+
+    <input id="button" type="submit" value="Login" class="btn btn-md form-control">
+
+</form>
+<a href="/register" id="reglink">Or Signup Now <i class="fas fa-arrow-alt-circle-right"></i></a>
+</div>    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

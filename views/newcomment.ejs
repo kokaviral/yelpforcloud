@@ -1,0 +1,15 @@
+<%include partials/headernewcomment.ejs%>
+
+<div class="container" id="mainc">
+    <p id="heading">Add a New comment for <%= campground.name %></p>
+    <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+        <div class="container" style="margin: auto auto;">
+            <textarea id="text" class="form-control" placeholder="Your Valuable Comment" name="comment[text]" rows="2" cols="50"></textarea>
+            <input type="submit" id="button" class="btn btn-danger btn-sm justify-content-center" style="margin-bottom: 30px;">
+        </div>
+        
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<%include partials/header.ejs%>
+
+<h1>Edit Form is here</h1>
+
+<form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+    <input type="text" name="update[campname]" class="form-control" value="<%=campground.name%>">
+    <input type="text" name="update[image]" class="form-control" value="<%=campground.image%>">
+    <input type="text" name="update[description]" class="form-control" value="<%=campground.description%>">
+    <input type="submit">
+</form>

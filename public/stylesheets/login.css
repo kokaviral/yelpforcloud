@@ -1,0 +1,161 @@
+
+.group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+
+  input
+   	{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    /* display:block; */
+    width:80%;
+    border:none;
+    border-bottom:0.5px solid whitesmoke;
+    font-family: 'Poppins', sans-serif;
+color: white;
+    background: none;
+  }
+  input:focus 	{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#83f1ff; 
+    text-shadow: 2px 2px 3px black;
+    font-size:20px;
+    font-family: 'Poppins', sans-serif;
+  
+    position:absolute;
+    pointer-events: stroke;
+    left:35px;
+    top:5px;
+    transition:0.3s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-15px;
+    font-size:14px;
+    font-weight: 20px;
+    color:rgb(255, 207, 75);
+  }
+  
+  /* BOTTOM BARS ================================= */
+.bar 	
+{ 
+  position:relative; 
+  display:block; 
+  width:300px; 
+}
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+  #alerte,#alerts
+{
+    margin-top: 10px;
+}
+
+body
+{
+  background-image: url("/Images/new (5).jpg");
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#yclogin
+{
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 90px;
+  text-shadow: 2px 2px 4px black;
+
+}
+
+#mainc
+{
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 400px;
+  height: 450px;
+  background-color:rgba(35, 35, 35,1);
+  box-shadow: 2px 2px 7px black;
+}
+
+#button
+{
+  background-color: #83f1ff;
+  width: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  box-shadow: 3px 3px 8px black;
+  border: none;
+  margin-bottom: 30px;
+}
+
+#button:hover
+{
+  background-color:rgb(255, 207, 75);
+     
+}
+
+#yclogin
+{
+  font-size: 40px;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: rgb(251, 255, 0);
+
+}
+
+#reglink
+{
+  margin-left: 200px;
+  margin-bottom: -20px;
+  text-decoration: none;
+  color: #fffb00;  
+  font-family: 'Montserrat', sans-serif;
+}
+
+#reglink:hover
+{
+  font-size: 18px;
+  transition: 70ms ease all;
+}
